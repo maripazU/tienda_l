@@ -3,21 +3,102 @@
 ASÍ SE ESCRIBEN LOS COMPATRIOS EN HTML
 Esta es mi primera página html
 todos los nombres de proyectos html van sin espacios, tildes o mayúsculas !!!
+cuando hay un error por la version de netbeans hay que ir al pom y poner la version de netbeans que se tiene :P
 -->
 <html>  <!-- aquí comienza el html-->
     <head>
         <title>TechShop</title>
         <meta charset="UTF-8"/> <!-- Para escoger el idioma con el que se va a escribir la página (escoger el set de caracteres) -->
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/> <!-- solo se jala el archivo css -->
+        <!-- todas las etiquetas van a tener esta característica -->
+        <!--<style>
+            h3 {
+                background-color: blue;
+                color: white;
+                font-family: cursive;
+            }
+        </style> esto se pasa a la capeta de estilos-->
     </head>
     <body> <!-- todo lo que se ve en la página como tal se pone aquí en el body -->
-        <a href="pagina7.html">Atrás</a>| <!-- Así es como se hace la referencia a las otras páginas usando hipervínculos, se arrastra -->
-        <a href="index.html">Inicio</a>|
-        <a href="pagina2.html">Siguiente</a><hr> <!-- Hard return: para hacer una línea -->
-        <h1 style = "text-align: center;background-color: black;color:white">TechShop</h1> 
-        <p>Su tienda en línea</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit gravida penatibus himenaeos mollis quam erat tincidunt inceptos, justo vivamus habitasse tempor dictumst est sagittis phasellus donec sed suscipit augue cras enim. Nostra blandit nullam rutrum suscipit interdum consequat ut eleifend luctus, et dis urna neque imperdiet sociis sapien est, aenean sollicitudin justo curabitur feugiat malesuada ultricies hac. Ultrices praesent hendrerit nulla egestas nibh auctor venenatis per posuere, dapibus conubia sed laoreet suscipit penatibus primis purus, dictum dis libero sodales velit nam accumsan habitant.</p>
-        <p>Praesent nullam sollicitudin diam aenean nec, integer potenti massa metus sociosqu, suscipit magnis condimentum quisque. Platea torquent fusce tempus suspendisse nam cras ornare hac iaculis lacinia eleifend porta egestas, interdum himenaeos luctus nunc ridiculus magnis nisi eget primis nisl purus vulputate. Montes vulputate praesent sem et ad ridiculus nisi, ligula commodo habitant pellentesque justo etiam dictumst massa, vel neque erat imperdiet ultrices tellus. Pretium aliquet malesuada libero pellentesque penatibus sollicitudin consequat facilisi, pulvinar posuere venenatis purus non habitasse augue curabitur, ultricies hendrerit gravida porta vulputate nisl volutpat.</p>
-        <p>Interdum semper sagittis placerat odio senectus aptent et quam netus, morbi lobortis felis aliquam curabitur vehicula nullam conubia porttitor, habitasse habitant bibendum parturient consequat dignissim egestas aliquet. Iaculis himenaeos scelerisque facilisis porta massa duis mollis sem, hendrerit vehicula magna penatibus nec ultrices hac convallis, dis aptent euismod gravida mauris malesuada egestas. Inceptos sodales mi sem condimentum massa cras cum orci sociosqu nibh vivamus, id interdum mauris elementum nulla pharetra nisl fames iaculis at. Molestie senectus condimentum pulvinar sollicitudin tempus himenaeos semper, feugiat fusce laoreet viverra dictumst vel porta sagittis, luctus montes interdum malesuada orci sed. </p>
-
+        <header>  <!-- header -->  
+            <h1 style = "text-align: center;background-color: black;color:white">TechShop</h1> 
+            <nav> <!-- navegacion-->
+                <a href="index.html">TechShop</a>
+                <a href="pagina7.html">&triangleleft;</a> <!-- Así es como se hace la referencia a las otras páginas usando hipervínculos, se arrastra -->
+                <a href="pagina2.html">&triangleright;</a><hr> <!-- Hard return: para hacer una línea -->
+            </nav> 
+        </header>
+        <aside>
+            <h2>Últimas noticias</h2>
+            <p>El producto más vendido la semana anterior fue la Alienware 9800</p>
+        </aside>
+        <section>
+            <h2>nuestros productos</h2>
+            <article> <!--información que se quiere que se presente junta-->
+                <h3>Alienware 9800</h3>
+                <figure>
+                    <img src= "https://www.techpowerup.com/img/08-03-18/area-51_cc-6.jpg" alt="alt" width="500"/> <!--es más eficiente por el espacio del proyecto, va a ser más rápido-->
+                    <figcaption> $100.00 (3) <a href="#">Add</a> </figcaption> 
+                </figure> <!--Es algo que no es primordial así que si puede verse que se vea, si no que se esconda. Si se pone la imagen normal entonces sí o sí que se vea-->
+                <p>Praesent nullam sollicitudin diam aenean nec, integer potenti massa metus sociosqu, suscipit magnis condimentum quisque. Platea torquent fusce tempus suspendisse nam cras ornare hac iaculis lacinia eleifend porta egestas, interdum himenaeos luctus nunc ridiculus magnis nisi eget primis nisl purus vulputate. Montes vulputate praesent sem et ad ridiculus nisi, ligula commodo habitant pellentesque justo etiam dictumst massa, vel neque erat imperdiet ultrices tellus. Pretium aliquet malesuada libero pellentesque penatibus sollicitudin consequat facilisi, pulvinar posuere venenatis purus non habitasse augue curabitur, ultricies hendrerit gravida porta vulputate nisl volutpat.</p>
+            </article>
+            <article> 
+                <h3>Teclado físico Bosforo 98</h3>
+                <figure>
+                    <img src= "https://ae01.alicdn.com/kf/S8eb3e5cf458e4acca145b54477212cd5E/ZA981-Teclado-mec-nico-RGB-de-98-teclas-perif-rico-ergon-mico-con-cable-USB-para.jpg" alt="alt" width="500"/> 
+                    <figcaption> $85.00 (3) <a href="#">Add</a> </figcaption> 
+                </figure>
+                <p>Praesent nullam sollicitudin diam aenean nec, integer potenti massa metus sociosqu, suscipit magnis condimentum quisque. Platea torquent fusce tempus suspendisse nam cras ornare hac iaculis lacinia eleifend porta egestas, interdum himenaeos luctus nunc ridiculus magnis nisi eget primis nisl purus vulputate. Montes vulputate praesent sem et ad ridiculus nisi, ligula commodo habitant pellentesque justo etiam dictumst massa, vel neque erat imperdiet ultrices tellus. Pretium aliquet malesuada libero pellentesque penatibus sollicitudin consequat facilisi, pulvinar posuere venenatis purus non habitasse augue curabitur, ultricies hendrerit gravida porta vulputate nisl volutpat.</p>
+            </article>
+            <p>Praesent nullam sollicitudin diam aenean nec, integer potenti massa metus sociosqu, suscipit magnis condimentum quisque. Platea torquent fusce tempus suspendisse nam cras ornare hac iaculis lacinia eleifend porta egestas, interdum himenaeos luctus nunc ridiculus magnis nisi eget primis nisl purus vulputate. Montes vulputate praesent sem et ad ridiculus nisi, ligula commodo habitant pellentesque justo etiam dictumst massa, vel neque erat imperdiet ultrices tellus. Pretium aliquet malesuada libero pellentesque penatibus sollicitudin consequat facilisi, pulvinar posuere venenatis purus non habitasse augue curabitur, ultricies hendrerit gravida porta vulputate nisl volutpat.</p>
+            <p>Interdum semper sagittis placerat odio senectus aptent et quam netus, morbi lobortis felis aliquam curabitur vehicula nullam conubia porttitor, habitasse habitant bibendum parturient consequat dignissim egestas aliquet. Iaculis himenaeos scelerisque facilisis porta massa duis mollis sem, hendrerit vehicula magna penatibus nec ultrices hac convallis, dis aptent euismod gravida mauris malesuada egestas. Inceptos sodales mi sem condimentum massa cras cum orci sociosqu nibh vivamus, id interdum mauris elementum nulla pharetra nisl fames iaculis at. Molestie senectus condimentum pulvinar sollicitudin tempus himenaeos semper, feugiat fusce laoreet viverra dictumst vel porta sagittis, luctus montes interdum malesuada orci sed. </p>
+            <article>
+                <h2> 5 productos más vendidos</h2>
+                <table border="0">
+                    <thead> <!-- encabezado -->
+                        <tr> <!-- fila -->
+                            <th>Código</th> <!-- nombre del encabezado -->
+                            <th>Descripción</th>
+                            <th>Ventas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Producto 1</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Producto 2</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Producto 3</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Producto 4</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Producto 5</td>
+                            <td>4</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+        <footer>
+            <!-- <p style = "text-align: center"> Derechos Reservados &copy; 2024</p> -->
+            Derechos Reservados &copy; 2024
+        </footer>
     </body>
 </html>
+
+<!-- librería con estilos boostop)?
+maneras de usar estilos: en línea, definir en el encabezado los estilos y página de estilos
+-->
