@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+ASÍ SE ESCRIBEN LOS COMPATRIOS EN HTML
+Esta es mi primera página html
+todos los nombres de proyectos html van sin espacios, tildes o mayúsculas !!!
+cuando hay un error por la version de netbeans hay que ir al pom y poner la version de netbeans que se tiene :P
+-->
+<html>  <!-- aquí comienza el html-->
+    <head>
+        <title>TechShop</title>
+        <meta charset="UTF-8"/> <!-- Para escoger el idioma con el que se va a escribir la página (escoger el set de caracteres) -->
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/> <!-- solo se jala el archivo css -->
+        <!-- todas las etiquetas van a tener esta característica -->
+        <!--<style>
+            h3 {
+                background-color: blue;
+                color: white;
+                font-family: cursive;
+            }
+        </style> esto se pasa a la capeta de estilos-->
+    </head>
+    <body> <!-- todo lo que se ve en la página como tal se pone aquí en el body -->
+        <header class="encabezado">  <!-- header -->  
+            <nav class="navegacion"> <!-- navegacion-->
+                <!--<h1 style = "text-align: center;background-color: black;color:white">TechShop</h1> -->
+                <a href="index.html" class="logo nav-link">TechShop</a>
+                <ul class="nav-menu">
+                    <li class="nav-menu-item"><a class="nav-link nav-menu-link" href="pagina7.html">&triangleleft;</a> <!-- Así es como se hace la referencia a las otras páginas usando hipervínculos, se arrastra --></li>
+                    <li class="nav-menu-item"><a class="nav-link nav-menu-link" href="pagina2.html">&triangleright;</a><hr> <!-- Hard return: para hacer una línea --></li>
+                    <li class="nav-menu-item"><a class="nav-link nav-menu-link" href="audio.html">Audio</a></li>
+                    <li class="nav-menu-item"><a class="nav-link nav-menu-link" href="video.html">Video</a></li>
+                    <li class="nav-menu-item"><a class="nav-link nav-menu-link" href="iframe.html">Iframe</a></li>
+                    <li class="nav-menu-item"><a class="nav-link nav-menu-link" href="formulario.html">Formulario</a></li>
+                </ul>
+            </nav> 
+        </header>
+        <aside>
+            <h2>Uso de audios</h2>
+            <p>Ejemplo de uso de un audio local</p>
+        </aside>
+        <section>
+            <h2>Audios</h2>
+            <article> <!--información que se quiere que se presente junta-->
+                <h3>Música celta</h3>
+                <figure>
+                    <audio controls>
+                        <source src="audios/musica.mp3" type="audio/mpeg">
+                        Su visor no soprta esta extención <code>audio</code> tag. <!--  -->
+                    </audio>
+                    <figcaption> Tonada irlandesa </figcaption> 
+                </figure>
+            </article>
+        </section>
+        <footer>
+            <!-- <p style = "text-align: center"> Derechos Reservados &copy; 2024</p> -->
+            Derechos Reservados &copy; 2024
+        </footer>
+    </body>
+</html>
+
+<!-- librería con estilos boostop)?
+maneras de usar estilos: en línea, definir en el encabezado los estilos y página de estilos
+-->

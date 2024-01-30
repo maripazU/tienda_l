@@ -20,12 +20,18 @@ cuando hay un error por la version de netbeans hay que ir al pom y poner la vers
         </style> esto se pasa a la capeta de estilos-->
     </head>
     <body> <!-- todo lo que se ve en la página como tal se pone aquí en el body -->
-        <header>  <!-- header -->  
-            <h1 style = "text-align: center;background-color: black;color:white">TechShop</h1> 
-            <nav> <!-- navegacion-->
-                <a href="index.html">TechShop</a>
-                <a href="pagina7.html">&triangleleft;</a> <!-- Así es como se hace la referencia a las otras páginas usando hipervínculos, se arrastra -->
-                <a href="pagina2.html">&triangleright;</a><hr> <!-- Hard return: para hacer una línea -->
+        <header class="encabezado">  <!-- header -->  
+            <nav class="navegacion"> <!-- navegacion-->
+                <!--<h1 style = "text-align: center;background-color: black;color:white">TechShop</h1> -->
+                <a href="index.html" class="logo nav-link">TechShop</a>
+                <ul class="nav-menu">
+                    <li class="nav-menu-item"><a class="nav-link nav-menu-link" href="pagina7.html">&triangleleft;</a> <!-- Así es como se hace la referencia a las otras páginas usando hipervínculos, se arrastra --></li>
+                    <li class="nav-menu-item"><a class="nav-link nav-menu-link" href="pagina2.html">&triangleright;</a><hr> <!-- Hard return: para hacer una línea --></li>
+                    <li class="nav-menu-item"><a class="nav-link nav-menu-link" href="audio.html">Audio</a></li>
+                    <li class="nav-menu-item"><a class="nav-link nav-menu-link" href="video.html">Video</a></li>
+                    <li class="nav-menu-item"><a class="nav-link nav-menu-link" href="iframe.html">Iframe</a></li>
+                    <li class="nav-menu-item"><a class="nav-link nav-menu-link" href="formulario.html">Formulario</a></li>
+                </ul>
             </nav> 
         </header>
         <aside>
