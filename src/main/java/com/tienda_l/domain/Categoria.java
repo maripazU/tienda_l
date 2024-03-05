@@ -1,8 +1,9 @@
 package com.tienda_l.domain;
-//Esta clase va a mapear una tabla de una base de datos 
 
+//Esta clase va a mapear una tabla de una base de datos 
 import jakarta.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 import lombok.Data;
 
 
@@ -19,4 +20,8 @@ public class Categoria implements Serializable{ //quiere decir que se va a manda
     private String descripcion;
     private String rutaImagen;
     private boolean activo;
+    
+    @OneToMany
+    @JoinColumn(name="id_categoria", updatable = false)
+    private List<Producto> productos;
 }
