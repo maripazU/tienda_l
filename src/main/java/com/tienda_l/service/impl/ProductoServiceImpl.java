@@ -5,6 +5,7 @@ import com.tienda_l.domain.Producto;
 import com.tienda_l.service.ProductoService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -43,6 +44,27 @@ public class ProductoServiceImpl implements ProductoService {
     @Transactional() //estos no tienen el readOnly=true pq sí van a modificar
     public void saveProducto(Producto producto) {
         productoDao.save(producto);
+    }
+    
+    //Esta consulta utiliza el método @Query
+    @Override
+    @Transactional(readOnly=true)
+    public List<Producto> metodoQuery(double precioInf, double precioSup){
+        return productoDao.findByPrecioBetweenOrderByDescripcion(precioInf, precioSup);
+    }
+    
+    //Esta consulta utiliza el método JPQL
+    @Override
+    @Transactional(readOnly=true)
+    public List<Producto> metodoJPQL(@Param("precioInf") double percioInf, @Param("precioSup") double precioSub){
+        return productoDao.metodoJPQL(percioInf, precioSub);
+    }
+    
+    //Esta consulta utiliza el método lenguaje SQL
+    @Override
+    @Transactional(readOnly=true)
+    public List<Producto> metodoNativo(@Param("precioInf") double percioInf, @Param("precioSup") double precioSub){
+        return productoDao.metodoNativo(percioInf, precioSub);
     }
 
 }

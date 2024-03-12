@@ -89,6 +89,16 @@
             <artifactId>firebase-admin</artifactId>
             <version>9.2.0</version>
         </dependency>
+        <!-- semana 9. boton derecho insertar código spring boot dependencies. se agregar esta que es de seguridad-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        <!-- semana 9-->
+        <dependency>
+            <groupId>org.thymeleaf.extras</groupId>
+            <artifactId>thymeleaf-extras-springsecurity6</artifactId>
+        </dependency>
         <!-- una vez se le da clean and build se instalan las dependencias (si hubiera internet) - todos estos son para poder usar bootstrap-->
     </dependencies>
 

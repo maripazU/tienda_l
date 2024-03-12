@@ -1,0 +1,19 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"> 
+
+    <head th:replace="~{layout/plantilla :: head}"> <!-- para llamar al encabezado de la plantilla -->
+        <title>TechShop</title>
+    </head>
+    <body> 
+        <header th:replace="~{layout/plantilla :: header}"/> 
+        
+        <h2>LOGIN</h2>
+        <form method="POST" th:action="@{/login}">
+            <input type="text" name="username"/>
+                <br/>
+            <input type="password" name="password"/>
+            <input type="submit" value="Login" />
+        </form>
+        <footer th:replace="~{layout/plantilla :: footer}"/>
+    </body>
+</html>
