@@ -115,7 +115,7 @@
                                             <td>[[${producto.existencias}]]</td>
                                             <td>[[${producto.precio*producto.existencias}]]</td>
                                             <td>[[${producto.categoria.descripcion}]]</td>
-                                            
+
                                             <td th:text="${producto.activo} ? 'Activa' : 'Inactiva'" />
                                             <td><a th:href="@{/producto/eliminar/}+${producto.idProducto}"
                                                    class="btn btn-danger">
@@ -166,8 +166,8 @@
                                             </div>
                                             <div class="card-body">
 
-                                                
-                                                
+
+
                                                 <div class="mb-3">
                                                     <label for="categoria">[[#{producto.Categoria}]]</label>
                                                     <select class="form-select" aria-label="Default select example" name="categoria.idCategoria" th:field="*{categoria.idCategoria}">
@@ -247,5 +247,32 @@
                 </div>
             </div>
         </section>
+
+        <section th:fragment="filtro">
+            <div class="row">
+                <div col-md-4>
+                    <form method="POST" th:action="@{/producto/query1}">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="mb-3"> <!-- margin bottom 3 -->
+                                    <label for="fechaInf">Precio inferior</label>
+                                    <input type="number" class="form-control" th:value="${precioInf}" th:name="precioInf" required="true"/>   
+                                </div>
+                                <div class="mb-3"> 
+                                    <label for="fechaSup">Precio superior</label>
+                                    <input type="number" class="form-control" th:value="${precioSup}" th:name="precioSup" required="true"/>
+                                </div>
+                            </div>
+                            <div class="card-footer text-center">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas-fa-check"></i> Filtrar
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
     </body>
 </html>
