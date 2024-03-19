@@ -99,6 +99,11 @@
             <groupId>org.thymeleaf.extras</groupId>
             <artifactId>thymeleaf-extras-springsecurity6</artifactId>
         </dependency>
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>2.0.1.Final</version>
+        </dependency>
         <!-- una vez se le da clean and build se instalan las dependencias (si hubiera internet) - todos estos son para poder usar bootstrap-->
     </dependencies>
 
