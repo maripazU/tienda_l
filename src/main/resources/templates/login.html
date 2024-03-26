@@ -8,7 +8,7 @@
         <header th:replace="~{layout/plantilla :: header}"/> 
         <div class="card"> <!-- en esta columna hay una tarjeta -->
             <div class="row m-5 justify-content-md-center">
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <div class="card-header bg-success text-white">
                         <h2>[[#{login.login}]]</h2>
                     </div>
@@ -31,8 +31,19 @@
                                 </div>
                             </div>
                             <div class="card-footer col text-center">
+                                <button class="btn btn-primary">
+                                    <a class="btn" th:href="@{/registro/nuevo}">
+                                        <i class="fas-fa-user-plus"></i> [[#{accion.registrar}]] <!-- en el archivo de mensajes -->
+                                    </a>
+                                </button>
+                                <button class="btn btn-warning">
+                                    <a class="btn" th:href="@{/registro/recordar}">
+                                        <i class="fas-envelope"></i> [[#{accion.recordar}]] <!-- en el archivo de mensajes -->
+                                    </a>
+                                </button>
                                 <button class="btn btn-success" type="submit">
-                                    <i class="fas fa-sign-in-alt"></i>  [[#{login.login}]]
+                                    <span class="btn"><i class="fas fa-sign-in-alt"></i>  [[#{login.login}]]</span> 
+                                    
                                 </button>
                             </div>
                         </form>

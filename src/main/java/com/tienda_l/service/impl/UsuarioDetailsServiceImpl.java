@@ -1,5 +1,6 @@
 package com.tienda_l.service.impl;
 
+import com.tienda_l.service.UsuarioDetailsService;
 import com.tienda_l.dao.UsuarioDao;
 import com.tienda_l.domain.Rol;
 import com.tienda_l.domain.Usuario;
@@ -13,6 +14,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service("userDetailsService")
 public class UsuarioDetailsServiceImpl 
@@ -25,6 +27,7 @@ public class UsuarioDetailsServiceImpl
     private HttpSession session; //para guardar una variable de sesión, lo que va es la ruta de la imagen del usuario
     
     @Override
+    @Transactional (readOnly = true)
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
        //Se busca el usuario por el username
         Usuario usuario = usuarioDao.findByUsername(username);

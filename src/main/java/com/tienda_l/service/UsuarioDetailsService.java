@@ -1,4 +1,4 @@
-package com.tienda_l.service.impl;
+package com.tienda_l.service;
 
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

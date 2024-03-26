@@ -58,8 +58,8 @@
                         </ul>
                         <ul class="navbar-nav" sec:authorize='isAuthenticated()'> <!-- si estoy autenticado entonces... -->
                             <li class='nav-item text-white my-auto'>
-                                <img th:href='@{${session.usuarioImagen}}' 
-                                     alt='imagen' 
+                                <img th:src='@{${session.imagenUsuario}}' 
+                                     alt='your image' 
                                      height="40" 
                                      class='rounded-circle'/>
                                 <span sec:authentication='name'>Doe</span> <!-- se pone solo por poner algo -->
